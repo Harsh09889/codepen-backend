@@ -8,6 +8,7 @@ const UserSchema = new mongoose.Schema(
 		password: String,
 		gender: String,
 		image: String,
+		codepens: [mongoose.Types.ObjectId],
 		githubUsername: String,
 		signinMethod: String, // 'email-password', 'github-oauth', 'google-oauth'
 		// createdAt
