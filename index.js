@@ -10,8 +10,7 @@ import { Server } from "socket.io";
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
-io.set("origins", "*:*");
+const io = new Server(server, { cors: { origin: "*" } });
 
 app.use(express.json());
 app.use(cors({ credentials: true, origin: true }));
