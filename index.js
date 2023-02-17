@@ -11,6 +11,7 @@ import { Server } from "socket.io";
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
+io.set("origins", "*:*");
 
 app.use(express.json());
 app.use(cors({ credentials: true, origin: true }));
